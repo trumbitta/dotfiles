@@ -14,6 +14,8 @@ cat $SOURCE_DIR/.gitconfig >> $HOME/.gitconfig
 # zsh
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
+echo "alias gits='git status'" >> $HOME/.zshrc
+echo "alias ls='ls -GFh'" >> $HOME/.zshrc
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' $HOME/.zshrc
