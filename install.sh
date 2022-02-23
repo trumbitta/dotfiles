@@ -15,6 +15,8 @@ cat $SOURCE_DIR/.gitconfig >> $HOME/.gitconfig
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
 echo "alias gits='git status'" >> $HOME/.zshrc
+echo "alias gitb='git branch --no-pager'" >> $HOME/.zshrc
+echo "alias gib='git branch --no-pager'" >> $HOME/.zshrc
 echo "alias ls='ls -GFh'" >> $HOME/.zshrc
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
